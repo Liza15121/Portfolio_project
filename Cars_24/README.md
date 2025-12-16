@@ -8,7 +8,7 @@
 2. Rule based calculations for the depreciation of the car
 2. Rule based calculation for condition of the vehicle
 
-As the **Pricing Data Scientist working at Cars24, you are given a task**
+
 
 ### GOAL: To automate the process of estimating price of the used car
 

@@ -2,10 +2,9 @@ import streamlit as st
 import pandas as pd
 import pickle
 
-with open ("/Users/tameemislam/Documents/Portfolio_project/Cars_24/car_pred_model", 'rb') as file:
+with open ("./car_pred_model", 'rb') as file:
     model = pickle.load(file)
-
-cars_df = pd.read_csv("/Users/tameemislam/Documents/Portfolio_project/Cars_24/Cars24.csv")
+cars_df = pd.read_csv("./Cars24.csv")
 
 st.markdown("<h1 style='text-align: center; color: #4CAF50;'>Car Resale Price Prediction App</h1>", unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: center; color: #666;'>Get the best resale price estimate and matching cars!</h3>", unsafe_allow_html=True)

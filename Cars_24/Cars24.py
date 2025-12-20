@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import pickle
 
-with open ("./car_pred_model", 'rb') as file:
+with open ("car_pred_model", 'rb') as file:
     model = pickle.load(file)
 cars_df = pd.read_csv("./Cars24.csv")
 

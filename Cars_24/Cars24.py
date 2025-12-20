@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import pickle
 
-with open ("car_pred_model", 'rb') as file:
+with open ("car_pred", 'rb') as file:
     model = pickle.load(file)
 cars_df = pd.read_csv("./Cars24.csv")
 
@@ -39,7 +39,7 @@ engine = col1.slider("Set the Engine Power",
                      500, 6750, step=100)
 
 
-transmission_type = col2.selectbox("Select the transmission type",
+transmission_type = col2.radio("Select the transmission type",
                                    ["Manual", "Automatic"])
 
 seats = col2.selectbox("Enter the number of seats",
@@ -47,15 +47,6 @@ seats = col2.selectbox("Enter the number of seats",
 
 km_driven = col2.slider("Set the Kms Driven",
                         5000, 500000, step=5000)
-
-#Organizing inputs in sidebar
-
-#st.sidebar.header("Car Details")
-#fuel_type = st.sidebar.selectbox("Select the fuel type", ["Diesel", "Petrol", "CNG", "LPG", "Electric"])
-#seller_type = st.sidebar.selectbox("Select the seller type", ["Dealer", "Individual", "Trustmark Dealer"])
-#engine = st.sidebar.slider("Set the Engine Power", 500, 5000, step=100)
-#transmission_type = st.sidebar.selectbox("Select the transmission type", ["Manual", "Automatic"])
-#seats = st.sidebar.selectbox("Enter the number of seats", [4,5,7,8])
 
 
 if st.button("Predict Price"):
